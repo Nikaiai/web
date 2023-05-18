@@ -1,0 +1,10 @@
+6
+
+1 ALTER TABLE salespeople rename salespeople1;
+2 ALTER TABLE salespeople1 rename column sname to sname1;
+  ALTER TABLE salespeople1 rename column city to city1;
+3 ALTER TABLE salespeople1 add naprav varchar(15) after sname1;
+4 UPDATE salespeople1 SET naprav = 'produkti';
+5 UPDATE salespeople1 SET naprav = 'produkti';
+6 UPDATE salespeople1 SET naprav = 'produkti';
+7 
