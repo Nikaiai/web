@@ -7,4 +7,28 @@
 4 UPDATE salespeople1 SET naprav = 'produkti';
 5 UPDATE salespeople1 SET naprav = 'produkti';
 6 UPDATE salespeople1 SET naprav = 'produkti';
-7 
+7 ALTER TABLE orders add oplata varchar(15) after dostavka;
+8 ALTER TABLE orders add oplata varchar(15) after dostavka;
+9 UPDATE customers set pol = 'm';
+10 UPDATE customers set city = 'Paris' WHERE city = 'London';
+11 UPDATE salespeople1 SET comm = 0.16 WHERE comm > 0.12;
+12 DELETE FROM orders WHERE onum = 3011;
+
+
+5
+
+2 когда создается таблица при создании столбца указать default = <znachenie>
+3 insert into <nazvanie> select * from <nzv_dr_tablitsi> where <nazv_stlobtsa> = <zhachenie>
+4 должна быть уже создана через креат табле, стобцы должны совпадать в обеих таблицах
+5 ?? чтобы брать значение из др таблиц
+6 int varchar float 
+7 CREATE database grouber;
+  CREATE TABLE salespeople (snum integer(15), city char(15));
+  CREATE TABLE customers (cnum integer(15), cname char(15));
+  CREATE TABLE orders (amt float(15), sname char(15));
+  insert INTO salespeople VALUES (1, 'rnd'), (2, 'berlin');
+  insert INTO customers VALUES (1, 'oleg'), (2, 'max');
+  insert INTO orders VALUES (100, 'danil'), (240, 'ivan');
+
+
+4
