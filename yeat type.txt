@@ -31,6 +31,23 @@
   insert INTO orders VALUES (100, 'danil'), (240, 'ivan');
 
 
-4
+12
+
+1 SELECT customers.cname, customers.rating, avg(DISTINCT amt) from orders JOIN customers on customers.cnum = orders.cnum GROUP by orders.cnum;
+2 SELECT cname FROM customers WHERE city = 'Rome' AND rating < (SELECT AVG(rating) FROM customers);
+3 SELECT comm FROM salespeople WHERE snum IN (SELECT snum from customers WHERE city = 'Paris');
+4 SELECT COUNT(onum) FROM orders WHERE amt < (SELECT avg(amt) FROM orders) AND odate = '2021-03-10';
+5 SELECT sname FROM salespeople WHERE snum = (SELECT cnum - 1000 FROM customers WHERE city = 'Berlin');
+6 SELECT sum(amt) FROM orders GROUP by snum HAVING sum(amt) > (SELECT max(amt) FROM orders);
+
+13
+
+1 SELECT cname, 'bad',rating FROM customers WHERE rating BETWEEN 200 and (SELECT max(rating)-1 FROM customers) UNION SELECT cname, 'nice',rating FROM customers where rating IN (SELECT max(rating) FROM customers);
+2 SELECT cname, cnum FROM customers where cnum IN (SELECT cnum FROM orders WHERE amt > 0) UNION SELECT sname, snum FROM salespeople WHERE snum in (SELECT snum FROM orders WHERE amt > 0) order BY cname ASC;
+3 SELECT snum FROM salespeople WHERE city = 'San Jose' UNION all SELECT cnum FROM customers WHERE city = 'San Jose' UNION all SELECT onum FROM orders WHERE odate = '2021-04-10';
+
+
+
+
 
 
