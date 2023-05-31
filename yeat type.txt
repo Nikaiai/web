@@ -1,3 +1,30 @@
+7-1
+
+1 SELECT DISTINCT(city) FROM customers
+2 SELECT DISTINCT(rating) FROM customers
+3 SELECT DISTINCT(comm) FROM salespeople
+4 SELECT * FROM salespeople WHERE city='London'
+5 SELECT * FROM salespeople WHERE comm>0.12
+6 SELECT * FROM customers WHERE city='Rome'
+7 SELECT * FROM customers WHERE rating=100 OR rating=300
+8 SELECT * FROM orders WHERE amt<1000
+9 SELECT * FROM customers WHERE city='Rome' AND rating=200
+10 SELECT * FROM customers WHERE city='Berlin' OR rating=300
+
+7-2
+
+1 SELECT * FROM customers WHERE snum in(1001,1002,1007)
+2 SELECT * FROM orders WHERE cnum in(2001,2004,2008)
+3 SELECT * FROM salespeople WHERE snum BETWEEN 1001 AND 1005
+4 SELECT * FROM salespeople WHERE comm BETWEEN 0.10 AND 0.13
+5 SELECT * FROM customers WHERE cname BETWEEN 'A' AND 'H'
+6 SELECT * FROM customers WHERE city BETWEEN 'A' AND 'M'
+7 SELECT * FROM orders WHERE odate BETWEEN '2021-03-10' AND '2021-05-10'
+8 SELECT * FROM customers WHERE cname LIKE 'C%'
+9 SELECT * FROM customers WHERE cname LIKE 'G%'
+10 SELECT * FROM customers WHERE cname LIKE 'G%s'
+
+
 6
 
 1 ALTER TABLE salespeople rename salespeople1;
