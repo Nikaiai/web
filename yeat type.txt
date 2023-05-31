@@ -46,6 +46,16 @@
 2 SELECT cname, cnum FROM customers where cnum IN (SELECT cnum FROM orders WHERE amt > 0) UNION SELECT sname, snum FROM salespeople WHERE snum in (SELECT snum FROM orders WHERE amt > 0) order BY cname ASC;
 3 SELECT snum FROM salespeople WHERE city = 'San Jose' UNION all SELECT cnum FROM customers WHERE city = 'San Jose' UNION all SELECT onum FROM orders WHERE odate = '2021-04-10';
 
+16
+
+1 SELECT salespeople.sname FROM salespeople JOIN customers on customers.snum = salespeople.snum WHERE customers.city = any(SELECT salespeople.city);
+2 SELECT snum, sname FROM salespeople WHERE comm > all (SELECT comm FROM salespeople WHERE city = 'London');
+3 SELECT * FROM orders where amt < all(SELECT amt FROM orders WHERE odate = '2021-04-10');
+4 SELECT orders.snum FROM orders GROUP by orders.snum HAVING sum(DISTINCT amt) > all (SELECT (sum(DISTINCT amt)-1) FROM orders GROUP by snum);
+5 SELECT orders.snum, salespeople.sname FROM orders JOIN salespeople on salespeople.snum = orders.snum GROUP by orders.snum HAVING sum(DISTINCT amt) > all (SELECT (sum(DISTINCT amt)-1) FROM orders GROUP by snum);
+
+
+
 
 
 
