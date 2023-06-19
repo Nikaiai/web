@@ -1,3 +1,94 @@
+3-1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let figura = prompt("Введите фигуру");
+    let tsvet = prompt("Введите цвет");
+    let abc = "Мне нравится"
+    alert(abc + " " +  tsvet + " " + figura + "\n" + "длина фигуры: "+ figura.length)
+</script>
+<body>
+</body>
+</html>
+3-2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function yeat(){
+        alert(document.aform.ice.value)
+    }
+</script>
+<body>
+    <form name="aform">
+    <input type="text" name="imya" onclick="alert('внимательно введите свое имя')"> Введите имя <br>
+    <input type="checkbox" name="choc" onclick="alert('вы выбрали шоколад')" onmous>шоколад <br>
+    <input type="checkbox" name="ice" onclick="alert('Вы выбрали мороженнок')" >мороженное <br>
+    <input type="submit" onclick="alert('спасибо за участие')">
+    </form>
+</body>
+</html>
+
+4-1 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let fst = prompt()
+    let snd = prompt()
+</script>
+<body>
+    <!-- <input type="text" name="fst"> -->
+    <input type="button" name="fg" onclick="alertr(+fst * +snd)"> умножение
+    <input type="button" name="fghj" onclick="alert(+fst / +snd)"> delenie
+    <input type="button" name="dddh" onclick="alert(+fst + +snd)"> plus
+    <input type="button" name="ofd" onclick="alert(+fst - +snd)"> minus
+    <!-- <input type="text" name="snd"> -->
+
+</body>
+</html>
+
+4-2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let n = prompt("povtor")
+    let b = prompt('vvod b')
+    let y = 0
+    for(i=1;i<=n;i++)
+    {
+        y += (Math.sin(i*i + 3*b))
+    }
+    alert(y)
+</script>
+<body>
+    
+</body>
+</html>
+
+
 7-1
 
 1 SELECT DISTINCT(city) FROM customers
