@@ -2,19 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <script>
-    let n = prompt("povtor")
-    let b = prompt('vvod b')
-    let y = 0
-    for(i=1;i<=n;i++)
-    {
-        y += (Math.sin(i*i + 3*b))
-    }
-    alert(y)
+    let styles = ['Джаз', "Блюз"]
+    styles.push('Рок-н-ролл')
+    styles.shift()
+    styles.unshift('Рэп', "Регги")
+    console.log(styles)
 </script>
 <body>
     
