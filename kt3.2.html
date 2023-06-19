@@ -6,29 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script>
+    function yeat(){
+        alert(document.aform.ice.value)
+    }
+</script>
 <body>
-    <form>
-        Введите текст
-        <br> 
-        <input name="text" type="text" required/>
-        <br>
-        <input name="afasf" type="submit" value="Отправить" />
-        <br>
-        <br>
-        Что вам больше нравится?
-        <br>
-        <input id="choco" name="choco" type="checkbox" />
-        <label for="choco">Шоколад</label>
-        <input id="icecr" name="icecr" type="checkbox" /> 
-        <label for="icecr">Мороженное</label>
-        var age=20;
-        var ans;
-    
-        if (age < 18) {
-        ans = "Underage"
-        } else {
-         ans = "Let em in!";
-        }
+    <form name="aform">
+    <input type="text" name="imya" onclick="alert('внимательно введите свое имя')"> Введите имя <br>
+    <input type="checkbox" name="choc" onclick="alert('вы выбрали шоколад')" onmous>шоколад <br>
+    <input type="checkbox" name="ice" onclick="alert('Вы выбрали мороженнок')" >мороженное <br>
+    <input type="submit" onclick="alert('спасибо за участие')">
     </form>
 </body>
 </html>
