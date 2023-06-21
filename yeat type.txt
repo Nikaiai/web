@@ -1,3 +1,39 @@
+5-3-2 dodelay
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let a = prompt()
+    let b = prompt()
+    function fact(n){
+        let result = 1
+        while(n) result *= n--
+        return result
+    }
+    function sum(obj){
+    let result = 1
+    let fgh = 0
+        for(i=+a; i<+b; i++){
+            if(i%2!=0){
+                fgh += fact(i)
+            }
+        }
+    }
+    let m = "summa factorialov vseh hechethih chisel: " + fgh
+    document.write(m)
+</script>
+<body>
+    
+</body>
+</html>
+
+
+
 3-1
 <!DOCTYPE html>
 <html lang="en">
