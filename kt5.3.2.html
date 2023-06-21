@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function factorial(n){
+            let result = 1
+            while(n) result *= n--
+            return result
+        }
+        function summa(obj){
+            let x = document.aform.fstn.value
+            let y = document.aform.sndn.value
+            let result = 1
+            let z = 0
+            for(i=+x;i<+y;i++){
+                if(i%2!=0){
+                    z += +factorial(i)
+                }
+            }
+        let res = 'Сумма нечетных фактриалов в промежутке от ' + x + ' до ' + y + ': ' + z
+        document.write(res)
+        }
+    </script>
+<form name="aform">
+    <pre>
+    <input type="text" name="fstn"> Нижний порог
+    <br>
+    <input type="text" name="sndn"> Верхний порог
+    <br>    
+    <input type="button" value="Вычислить фактриалы" onclick="summa(aform)">
+    </pre>
+</form>
+</body>
+</html>
