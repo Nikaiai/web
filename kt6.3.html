@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function damn(obj) {
+            z = Number(document.aform.num1.value)
+            switch(z)
+            {
+                case 3:
+                    obj.num2.value = '168₽'
+                    break
+                case 6:
+                    obj.num2.value = '312₽'
+                    break
+                case 12:
+                    obj.num2.value = '540₽'
+                    break
+                default:
+                    obj.num2.value = obj.num1.value * 60 + '₽'
+            }
+        }
+    </script>
+    <form name="aform">
+        Введите срок подписного периода: <input type="text" name="num1">
+        <br><br>
+        Стоимость подписки: <input type="text" name="num2">
+        <br><br>
+        <input type="reset" value="Сбросить" onclick="">
+        <br><br>
+        <input type="button" value="Определить" onclick="damn(aform)">
+    </form>
+</body>
+</html>

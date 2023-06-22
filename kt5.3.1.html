@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
 </head>
-<script>
-    let a = prompt('1 storona')
-    let b = prompt('2 storona')
-    let z = +a + +a + +b + +b
-    let v = a*b
-    alert('perimetr: ' + z + ' ploshad: ' + v)
-</script>
 <body>
-    
-</body>
-</html>
+<script>
+//сумма за квартал, налог и сумма, выдаваемая на руки
+function sum(obj)
+{
+let a1 = Number(obj.num1.value);
+let a2 = Number(obj.num2.value);
+let a3 = Number(obj.num3.value);
+let s = a1+a2+a3;
+let n = 0.13*s;
+let m = s - n;
+}
+function itog() {
+    document.getElementById('jan').style.visibility='visible'
+    document.getElementById('feb').style.visibility='visible'
+    document.getElementById('mar').style.visibility='visible'
+    document.getElementById('jan').value = s
+}
+</script>
+<h4>Определение дохода за квартал</h4>
+<form name = "form1">
+<p>Введите суммы за каждый месяц и нажмите <b>Вычислить</b></p>
+<pre>
+январь:<input type="text" name="num1" id="jan" size="10"><br>
+февраль:<input type="text" name="num2" id="feb" size="10"><br>
+март:<input type="text" name="num3" id='mar' size="10"><br>
+<input type="button" value="Вычислить" onmousedown = "itog()" onmouseup="sum(form1)"><br>
+</pre>
+<input type="reset">
