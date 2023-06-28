@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="aform">
+        Введите номер телефона <input type="text" name="tele"><br><br>
+        Введите ФИО <input  type="text" name="fio"><br><br>
+        <input type="button" name="submit" value="Отправить" onclick="test(aform)">
+    </form>
+    <script>
+        function test() {
+        let str = document.aform.tele.value
+        let strfio = document.aform.fio.value
+        let regexp = /\d{4}(-\d{3})(-\d{2})(-\d{2})/
+        let fioregexp = /^[А-ЯA-Z][а-яa-zА-ЯA-Z\-]{0,}\s[А-ЯA-Z][а-яa-zА-ЯA-Z\-]{1,}(\s[А-ЯA-Z][а-яa-zА-ЯA-Z\-]{1,})?$/
+        let final = regexp.test(str)
+        let fiofinal = fioregexp.test(strfio)
+        console.log(fiofinal)
+        if(fiofinal == true) {
+            console.log(strfio)
+        } else {
+            alert("ФИО введено некорректно")
+        }
+        if (final == true){
+            console.log(str)
+        } else {
+            alert('Введен некорректный номер')
+        }
+        }
+    </script>
+</body>
+</html>
