@@ -211,7 +211,56 @@
 
 
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//1
+        let date = new Date()
+        let date1 = new Date(1970, 01, 01)
+        console.log('Кол-во часов с 1970: ' + Math.round((date - date1) / (1000 * 3600)))
+//2
+        let date2 = new Date(2000, 01, 01)
+        console.log('Кол-во часов с 2000: ' + Math.round((date - date2) / (1000 * 3600)))
+//3
+        let date3 = new Date(date.setFullYear(date.getFullYear()+5))
+        console.log('Дата + 5 лет: ' + date3)
+//4
+        function checkDate(date){
+            if (date%4 == 0){
+                console.log('True')
+            }
+            else{
+                console.log('False')
+            }
+        }
+        let date4 = new Date(2024)
+        checkDate(date4)
+        checkDate(date)
+//5
+        let dni = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+        let date5 = new Date(2005, 07, 20)
+        function logDay(date){
+            console.log(dni[date.getDay()-1])
+        }
+        logDay(date)
+        logDay(date5)
+//6
+        let date6 = new Date()
+        let date_end = new Date(date6.setHours(23,59,59))
+        function endDay(date){
+            console.log(Math.round((date - date_end) / (1000)))
+        }
+        endDay(date)
+    </script>
+</body>
+</html>
 
 
 
